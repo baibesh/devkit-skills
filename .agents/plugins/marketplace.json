@@ -1,0 +1,44 @@
+{
+  "name": "devkit-skills",
+  "interface": {
+    "displayName": "DevKit Skills"
+  },
+  "plugins": [
+    {
+      "name": "spring-boot",
+      "source": {
+        "source": "local",
+        "path": "./plugins/spring-boot"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "frontend",
+      "source": {
+        "source": "local",
+        "path": "./plugins/frontend"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "fullstack",
+      "source": {
+        "source": "local",
+        "path": "./plugins/fullstack"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "fullstack",
+  "version": "0.1.0",
+  "description": "Cross-stack skills: OpenAPI contract between Spring Boot and TypeScript, team code review, contract-first feature workflow.",
+  "author": {
+    "name": "Mukhtarkhan Baibesh",
+    "url": "https://github.com/baibesh"
+  },
+  "homepage": "https://github.com/baibesh/devkit-skills/tree/main/plugins/fullstack",
+  "keywords": [
+    "openapi",
+    "code-review",
+    "fullstack",
+    "workflow"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "DevKit: Fullstack",
+    "shortDescription": "Cross-stack skills: OpenAPI contract between Spring Boot and TypeScript, team code review, contract-first feature workflow.",
+    "developerName": "baibesh",
+    "category": "Productivity",
+    "capabilities": [
+      "Skills"
+    ]
+  }
+}

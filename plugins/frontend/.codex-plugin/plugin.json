@@ -1,0 +1,27 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "description": "Framework-agnostic TypeScript conventions and testing for Angular, React and Next.js frontends.",
+  "author": {
+    "name": "Mukhtarkhan Baibesh",
+    "url": "https://github.com/baibesh"
+  },
+  "homepage": "https://github.com/baibesh/devkit-skills/tree/main/plugins/frontend",
+  "keywords": [
+    "typescript",
+    "testing",
+    "frontend",
+    "vitest",
+    "playwright"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "DevKit: Frontend",
+    "shortDescription": "Framework-agnostic TypeScript conventions and testing for Angular, React and Next.js frontends.",
+    "developerName": "baibesh",
+    "category": "Productivity",
+    "capabilities": [
+      "Skills"
+    ]
+  }
+}

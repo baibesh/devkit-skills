@@ -1,0 +1,168 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "devkit-skills",
+  "description": "Curated agent skills for fullstack teams: Angular, React and Next.js frontends with Java / Spring Boot backends. Official framework skills are referenced from upstream; cross-cutting skills are maintained here.",
+  "owner": {
+    "name": "Mukhtarkhan Baibesh",
+    "url": "https://github.com/baibesh"
+  },
+  "plugins": [
+    {
+      "name": "angular",
+      "description": "Official Angular skills (angular-developer, angular-new-app) fetched from github.com/angular/skills, the mirror of angular/angular. Signals, control flow, Signal Forms, SSR, testing, CLI tooling.",
+      "category": "frontend",
+      "tags": [
+        "angular",
+        "typescript",
+        "frontend",
+        "official"
+      ],
+      "author": {
+        "name": "Angular Team @ Google"
+      },
+      "homepage": "https://github.com/angular/skills",
+      "license": "MIT",
+      "source": {
+        "source": "github",
+        "repo": "angular/skills",
+        "ref": "main"
+      },
+      "skills": [
+        "./angular-developer",
+        "./angular-new-app"
+      ]
+    },
+    {
+      "name": "react",
+      "description": "Vercel's React skills: vercel-react-best-practices (performance rules), vercel-composition-patterns, react-view-transitions, web-design-guidelines. Fetched from vercel-labs/agent-skills.",
+      "category": "frontend",
+      "tags": [
+        "react",
+        "typescript",
+        "frontend",
+        "performance",
+        "official"
+      ],
+      "author": {
+        "name": "Vercel"
+      },
+      "homepage": "https://github.com/vercel-labs/agent-skills",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vercel-labs/agent-skills.git",
+        "path": "skills",
+        "ref": "main"
+      },
+      "skills": [
+        "./react-best-practices",
+        "./composition-patterns",
+        "./react-view-transitions",
+        "./web-design-guidelines"
+      ]
+    },
+    {
+      "name": "nextjs",
+      "description": "Official Next.js skills from vercel/next.js: Cache Components and Partial Prefetching adoption and optimizers, bundle optimizer, dev-loop verification. Installs the react plugin as a dependency. Next.js 16.3+ also generates AGENTS.md pointing at its bundled docs.",
+      "category": "frontend",
+      "tags": [
+        "nextjs",
+        "react",
+        "frontend",
+        "official"
+      ],
+      "author": {
+        "name": "Next.js Team"
+      },
+      "homepage": "https://github.com/vercel/next.js/tree/canary/skills",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vercel/next.js.git",
+        "path": "skills",
+        "ref": "canary"
+      },
+      "dependencies": [
+        "react"
+      ]
+    },
+    {
+      "name": "spring-boot",
+      "description": "Team conventions and testing guide for Spring Boot 4 on Java 21-25: project structure, REST with RFC 9457 Problem Details, JPA, configuration, Testcontainers, slice tests, ArchUnit.",
+      "category": "backend",
+      "tags": [
+        "java",
+        "spring-boot",
+        "testing",
+        "conventions"
+      ],
+      "source": "./plugins/spring-boot",
+      "skills": [
+        "./skills/spring-boot-conventions",
+        "./skills/spring-boot-testing"
+      ]
+    },
+    {
+      "name": "spring-boot-community",
+      "description": "Community Spring Boot 4 skills by Siva Prasad Reddy (sivalabs): spring-boot (deep references for JPA, MVC, Modulith, Testcontainers), java-code-review, jspecify, spring-modulith-verifier. Fetched from sivaprasadreddy/sivalabs-agent-skills.",
+      "category": "backend",
+      "tags": [
+        "java",
+        "spring-boot",
+        "backend",
+        "community"
+      ],
+      "author": {
+        "name": "K Siva Prasad Reddy"
+      },
+      "homepage": "https://github.com/sivaprasadreddy/sivalabs-agent-skills",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sivaprasadreddy/sivalabs-agent-skills.git",
+        "path": "skills",
+        "ref": "main"
+      },
+      "skills": [
+        "./spring-boot",
+        "./java-code-review",
+        "./jspecify",
+        "./spring-modulith-verifier"
+      ]
+    },
+    {
+      "name": "frontend",
+      "description": "Framework-agnostic TypeScript frontend skills: typescript-conventions (strict TS, lint and format, boundary validation) and frontend-testing (Vitest + Testing Library, Angular Vitest builder, MSW, Playwright).",
+      "category": "frontend",
+      "tags": [
+        "typescript",
+        "testing",
+        "frontend",
+        "vitest",
+        "playwright"
+      ],
+      "source": "./plugins/frontend",
+      "skills": [
+        "./skills/typescript-conventions",
+        "./skills/frontend-testing"
+      ]
+    },
+    {
+      "name": "fullstack",
+      "description": "Cross-stack skills: api-contract (OpenAPI-first between Spring Boot and TypeScript clients), review-checklist (team code review), fullstack-feature (contract-first feature workflow).",
+      "category": "workflow",
+      "tags": [
+        "openapi",
+        "code-review",
+        "fullstack",
+        "workflow"
+      ],
+      "source": "./plugins/fullstack",
+      "skills": [
+        "./skills/api-contract",
+        "./skills/review-checklist",
+        "./skills/fullstack-feature"
+      ]
+    }
+  ]
+}

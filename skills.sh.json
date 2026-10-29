@@ -1,0 +1,36 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "paths": [
+    "./plugins/spring-boot/skills",
+    "./plugins/frontend/skills",
+    "./plugins/fullstack/skills"
+  ],
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Spring Boot",
+      "description": "Conventions and testing for Spring Boot 4 / Java 21-25.",
+      "skills": [
+        "spring-boot-conventions",
+        "spring-boot-testing"
+      ]
+    },
+    {
+      "title": "Frontend (TypeScript)",
+      "description": "Framework-agnostic TypeScript conventions and testing.",
+      "skills": [
+        "typescript-conventions",
+        "frontend-testing"
+      ]
+    },
+    {
+      "title": "Fullstack",
+      "description": "API contract, review checklist, feature workflow.",
+      "skills": [
+        "api-contract",
+        "review-checklist",
+        "fullstack-feature"
+      ]
+    }
+  ]
+}

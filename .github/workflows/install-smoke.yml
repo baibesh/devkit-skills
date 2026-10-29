@@ -1,0 +1,37 @@
+name: install-smoke
+
+# Installs every plugin, including the upstream-referenced ones, to catch upstream layout changes.
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+  pull_request:
+    paths: [".claude-plugin/marketplace.json"]
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    env:
+      CLAUDE_CODE_PLUGIN_PREFER_HTTPS: "1"
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+      - run: npm install -g @anthropic-ai/claude-code
+      - run: claude plugin marketplace add "$GITHUB_WORKSPACE"
+      - name: Install plugins and check expected skills
+        run: |
+          set -euo pipefail
+          check() {
+            claude plugin install "$1@devkit-skills"
+            claude plugin details "$1@devkit-skills" | tee "details-$1.txt"
+            grep -q "$2" "details-$1.txt" || { echo "::error::$1 is missing skill $2"; exit 1; }
+          }
+          check angular angular-developer
+          check react vercel-react-best-practices
+          check nextjs next-cache-components-optimizer
+          check spring-boot spring-boot-conventions
+          check spring-boot-community java-code-review
+          check frontend typescript-conventions
+          check fullstack api-contract

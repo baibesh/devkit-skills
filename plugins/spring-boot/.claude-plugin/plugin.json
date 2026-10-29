@@ -1,0 +1,18 @@
+{
+  "name": "spring-boot",
+  "version": "0.1.0",
+  "description": "Team conventions and testing guide for Spring Boot 4 on Java 21-25.",
+  "author": {
+    "name": "Mukhtarkhan Baibesh",
+    "url": "https://github.com/baibesh"
+  },
+  "homepage": "https://github.com/baibesh/devkit-skills/tree/main/plugins/spring-boot",
+  "repository": "https://github.com/baibesh/devkit-skills",
+  "license": "MIT",
+  "keywords": [
+    "java",
+    "spring-boot",
+    "testing",
+    "conventions"
+  ]
+}
